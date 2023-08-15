@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let numbers = [1, 7, 5, 9, 2, 6];
+    // - In ra các phần tử chẵn trong mảng
+    for (let i = 0; i < numbers.length; i++) {
+        console.log(`phần tử ${i} trong mảng ${numbers[i]}`)
+    }
+    // - In ra các phần tử tại vị trí chẵn trong mảng
+    for (let i = 0; i < numbers.length; i++) {
+        if (i % 2 === 0) {
+            console.log(`phần tử vị trí chẵn ${i} trong mảng ${numbers[i]}`)
+        }
+    }
+    // - In ra tổng các phần tử chẵn trong mảng
+    let sumChan = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        if (i % 2 === 0) {
+            sumChan += numbers[i]
+        }
+    }
+    console.log(`tổng chẵn là ${sumChan}`);
+    // - In ra tổng các phần tử lớn hơn 5 trong mảng
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] > 5) {
+            console.log(`phần tử lớn hơn 5 trong mảng ${numbers[i]}`)
+        }
+    }
+    // - In ra tổng các phần tử chia 7 dư 2 trong mảng
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] % 7 === 2) {
+            console.log(`phần tử chia 7 dư 2 trong mảng ${numbers[i]}`)
+        }
+    }
+    // - In ra max của mang
+    let max = numbers[0]
+    for (let i = 0; i < numbers.length; i++) {
+        if (max < numbers[i]) {
+            max = numbers[i]
+        }
+    }
+    console.log(`phần tử max trong mảng ${max}`)
+    // - In ra max của các phần tử chẵn mảng
+    let maxChan = numbers[0]
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] % 2 === 0 && maxChan < numbers[i]) {
+            maxChan = numbers[i]
+        }
+    }
+    console.log(`phần tử max chẵn trong mảng ${maxChan}`)
+    // - In ra số lượng các phần tử chia hết cho 5 trong mảng
+    let count = 0
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] % 5 === 0) {
+            count++;
+        }
+    }
+    console.log(`số lượng các phần tử chia hết cho 5 trong mảng ${count}`)
+    // - In ra trung bình các phần tử chia hết cho 5 trong mảng
+    let sum5 = 0;
+    let count5 = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] % 5 === 0) {
+            sum5 += numbers[i];
+            count5++;
+        }
+    }
+    console.log(numbers)
+    console.log(`trung bình các phần tử chia hết cho 5 ${sum5 / count5}`)
+</script>
